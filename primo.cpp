@@ -1,5 +1,9 @@
+//è un poco come se compri una cosa, adesso la hai e la puoi usare, la includi nella tua, qui la includi nel codice...
 #include <fmt/format.h>
 
+float convertidor(float celsius) {
+	return celsius * (9.0 / 5.0) + 32;
+}
 /**
  * int è il risultato della funzione che è chiamata main
  * un intero è un numero senza virgola
@@ -21,7 +25,7 @@ int main() {
 	//fare che la variabile celsius parta dal valore di inizio, arrivi al valore di fine, incrementandosi ad ogni iterazione del valore passo
 	for (float celsius = inizio; celsius < fine; celsius += passo) {
 		//L'equazione di conversione, la copia incolliamo da wikipedia, poteva esser anche la conversione da florz a bnoff
-		const float fahrenheit = celsius * (9.0 / 5.0) + 32;
+		const float fahrenheit = convertidor(celsius);
 		//Della libreria usa la funzione print
 		//La sintassi {} definisce dove mettere un valore (che verrà indicato in seguito) e si chiama segnaposto
 		fmt::print("{:7.1f} {:7.1f} \n", celsius, fahrenheit);
